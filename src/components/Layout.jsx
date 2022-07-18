@@ -1,9 +1,11 @@
-import Container from "./Container";
 import { Link } from "react-router-dom";
+import Container from "./Container";
+import LogoSVG from "./LogoSVG";
 
 function Logo() {
   return (
-    <Link to="/">
+    <Link to="/" className="flex justify-between items-center gap-2">
+      <LogoSVG />
       <div className="flex items-center text-white text-xl">NIT News</div>
     </Link>
   );
@@ -14,7 +16,7 @@ export default function Layout(props) {
     <>
       <div className="bg-blue-500">
         <Container>
-          <nav className="flex justify-between items-center py-4">
+          <nav className=" py-4">
             <Logo />
           </nav>
         </Container>

@@ -1,10 +1,8 @@
-import { getNews } from "../api/getNews";
-import { useQuery } from "react-query";
 import NewsCard from "../components/NewsCard";
-import { Link } from "react-router-dom";
+import { useNewsQuery } from "../hooks/useNewsQuery";
 
 export default function App() {
-  const newsQuery = useQuery(["news"], getNews);
+  const newsQuery = useNewsQuery();
 
   if (newsQuery.status === "loading") {
     return <div>Loading...</div>;
@@ -14,18 +12,31 @@ export default function App() {
     return <div>Error</div>;
   }
 
+  function onLoadMore() {
+    newsQuery.fetchNextPage();
+  }
+
+  const newsPage = newsQuery.data.pages;
+
   return (
     <div className="flex flex-col">
-      {newsQuery.data.data.map((news, index) => (
-        <Link to={`/${news.id}`} key={news.id}>
+      {newsPage.map((page) => {
+        return page.data.map((news, newsIndex) => (
           <NewsCard
-            no={index + 1}
+            key={news.id}
+            id={news.id}
+            no={newsIndex + 1}
             title={news.title}
             upvote={news.upvote}
             createdAt={news.created_at}
           />
-        </Link>
-      ))}
+        ));
+      })}
+      {newsQuery.hasNextPage && (
+        <button className="p-2" onClick={onLoadMore}>
+          load more ↓
+        </button>
+      )}
     </div>
   );
 }

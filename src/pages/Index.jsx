@@ -32,6 +32,7 @@ export default function App() {
           />
         ));
       })}
+      {newsQuery.isFetchingNextPage && <div>Loading...</div>}
       {newsQuery.hasNextPage && (
         <button className="p-2" onClick={onLoadMore}>
           load more ↓

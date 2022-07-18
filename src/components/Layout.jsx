@@ -16,8 +16,11 @@ export default function Layout(props) {
     <>
       <div className="bg-blue-500">
         <Container>
-          <nav className=" py-4">
+          <nav className="w-full flex justify-between items-center py-4">
             <Logo />
+            <Link to="/create" className="text-white border-2 py-1 px-2">
+              New ✏️
+            </Link>
           </nav>
         </Container>
       </div>

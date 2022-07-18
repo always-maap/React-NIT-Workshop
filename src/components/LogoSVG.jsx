@@ -5,8 +5,8 @@ export default function Logo() {
       <text
         x="50%"
         y="50%"
-        dominant-baseline="middle"
-        text-anchor="middle"
+        dominantBaseline="middle"
+        textAnchor="middle"
         fill="white"
         style={{ fontSize: 20 }}
       >

@@ -8,6 +8,10 @@ import Layout from "./components/Layout";
 import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 
 const queryClient = new QueryClient({
   defaultOptions: {

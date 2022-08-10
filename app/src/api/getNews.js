@@ -6,7 +6,6 @@ export async function getNews(page) {
   const { from, to } = getPagination(page, PAGE_LIMIT);
   return await supabase
     .from("news")
-    .select("id, title, upvote, created_at")
-    .order("upvote", { ascending: false })
+    .select("id, title, created_at, upvote(value)")
     .range(from, to);
 }

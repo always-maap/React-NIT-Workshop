@@ -1,6 +1,8 @@
 import { useCreateNewsMutation } from "../hooks/useCreateNewsMutation";
+import { useSession } from "../hooks/useSession";
 
 export default function Create() {
+  const session = useSession();
   const createNewsMutation = useCreateNewsMutation();
 
   function onSubmit(e) {
@@ -8,7 +10,7 @@ export default function Create() {
     e.preventDefault();
     const title = formData.get("title");
     const body = formData.get("body");
-    createNewsMutation.mutate({ title, body });
+    createNewsMutation.mutate({ title, body, user_id: session.id });
   }
 
   return (

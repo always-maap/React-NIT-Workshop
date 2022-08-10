@@ -21,13 +21,12 @@ export default function App() {
   return (
     <div className="flex flex-col">
       {newsPage.map((page) => {
-        return page.data.map((news, newsIndex) => (
+        return page.data.map((news) => (
           <NewsCard
             key={news.id}
             id={news.id}
-            no={newsIndex + 1}
             title={news.title}
-            upvote={news.upvote}
+            upvote={news.upvote[0].value}
             createdAt={news.created_at}
           />
         ));

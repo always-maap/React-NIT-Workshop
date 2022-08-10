@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useUpvoteNewsMutation } from "../hooks/useUpvoteNewsMutation";
 
 export default function NewsCard(props) {
-  const { id, no, title, upvote, createdAt } = props;
+  const { id, title, upvote, createdAt } = props;
   const upvoteMutation = useUpvoteNewsMutation();
 
   function onUpvote() {
@@ -13,7 +13,6 @@ export default function NewsCard(props) {
   return (
     <div className="flex items-center py-4 border-solid border-b">
       <span>
-        {no}
         <button className="mx-2" onClick={onUpvote}>
           🔺
         </button>

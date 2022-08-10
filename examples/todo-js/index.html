@@ -3,7 +3,10 @@
   <head>
     <title>TODO - JS</title>
     <style>
-      body {
+      * {
+        box-sizing: border-box;
+      }
+      :root {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #333;
@@ -12,7 +15,7 @@
         justify-content: center;
         align-items: center;
         background-image: linear-gradient(to right, #439bff, #2f61fe);
-		height: 100vh;
+        height: 100vh;
       }
       .wrapper {
         background-color: white;
@@ -45,13 +48,13 @@
       }
       .delete {
         background: none;
-		border: none;
+        border: none;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
-		<h1 align="center">Todo List</h1>
+      <h1 align="center">Todo List</h1>
       <form id="todo-form">
         <input
           type="text"
@@ -80,7 +83,7 @@
 
         const deleteButton = document.createElement("button");
         deleteButton.innerText = "❌";
-        deleteButton.className = "delete"
+        deleteButton.className = "delete";
         deleteButton.addEventListener("click", () => {
           todoItem.remove();
         });

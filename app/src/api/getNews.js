@@ -7,5 +7,6 @@ export async function getNews(page) {
   return await supabase
     .from("news")
     .select("id, title, created_at, upvote(value)")
+    .order("created_at", { ascending: false })
     .range(from, to);
 }

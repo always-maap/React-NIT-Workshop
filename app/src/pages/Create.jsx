@@ -2,7 +2,7 @@ import { useCreateNewsMutation } from "../hooks/useCreateNewsMutation";
 import { useSession } from "../hooks/useSession";
 
 export default function Create() {
-  const session = useSession();
+  const { session } = useSession();
   const createNewsMutation = useCreateNewsMutation();
 
   function onSubmit(e) {

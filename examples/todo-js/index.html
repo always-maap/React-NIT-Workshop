@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO - JS</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #439bff, #2f61fe);
+		height: 100vh;
+      }
+      .wrapper {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+      }
+      input[type="text"] {
+        border: 1px solid #ccc;
+        width: 300px;
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 12px 20px 12px;
+        margin: 10px 25px 0 25px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 10px 25px;
+        margin: 0;
+      }
+      li {
+        list-style-type: none;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li:not(:last-child) {
+        border-bottom: rgb(0 0 0 / 0.1) 1px solid;
+      }
+      .delete {
+        background: none;
+		border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+		<h1 align="center">Todo List</h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Add a new task"
+          name="todo-input"
+          id="todo-input"
+        />
+        <input type="submit" hidden />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+      const todoList = document.querySelector("#todo-list");
+      const todoForm = document.querySelector("#todo-form");
+      const todoClear = document.querySelector("#todo-clear");
+      const todoInput = document.querySelector("#todo-input");
+
+      todoForm.addEventListener("submit", (e) => {
+        const formData = new FormData(e.currentTarget);
+        e.preventDefault();
+        const todoText = formData.get("todo-input");
+
+        const todoItem = document.createElement("li");
+        todoItem.innerText = todoText;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "❌";
+        deleteButton.className = "delete"
+        deleteButton.addEventListener("click", () => {
+          todoItem.remove();
+        });
+
+        todoList.appendChild(todoItem);
+        todoItem.appendChild(deleteButton);
+
+        todoInput.value = "";
+      });
+    </script>
+  </body>
+</html>

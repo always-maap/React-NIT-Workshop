@@ -1,0 +1,17 @@
+.btn {
+  border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background: none;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
+.btn:hover {
+  background: #ccc;
+}
+
+.btn:active {
+  transition: all 0.2s;
+  transform: translateY(2px);
+}

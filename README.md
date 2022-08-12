@@ -30,13 +30,13 @@
 
 See [slides](./slides.pdf)
 
-> **Warning** Each example has its own README
-
 # Setup
 Make sure you have [node.js](https://nodejs.org/en/) installed. Install yarn if you haven't already. 
 ```npm install --global yarn```
 
 This repo is a [yarn workspace](https://classic.yarnpkg.com/lang/en/docs/workspaces/). a simple ```yarn install``` should share dependeices in examples and app.
+
+> **Warning** Each example has its own README to setup
 
 # Credit
 All the credit goes to wonderful people at Noshirvani Computer Association(Mohsen Amiri, Reza Bagherian, Yasamin Tavakoli and Ali Bagheri, ...).

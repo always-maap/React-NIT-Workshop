@@ -20,9 +20,9 @@
 | Day   | Links                                |
 |:------|--------------------------------------|
 | Day 1 | [Telegram](https://t.me/c/1757673207/11), [YouTube](https://youtu.be/lVkYNbCkgQE) |
-| Day 2 |                                                                                   |
-| Day 3 |                                                                                   |
-| Day 4 |                                                                                   |
+| Day 2 | [Telegram](https://t.me/c/1757673207/16), [YouTube](https://youtu.be/aWA1_HaTyrk) |
+| Day 3 | [Telegram](https://t.me/c/1757673207/18), [YouTube](https://youtu.be/MMJnYUGtdAU)|
+| Day 4 | [YouTube](https://youtu.be/wmza4qxid-w) |
 
 > **Note** Join [telegram](https://t.me/+mmiBVO34yQ5iMzI0) channel for more information and resources. 
 

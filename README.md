@@ -6,7 +6,7 @@
   <p>React Workshop for Babol Noshirvani University of Technology - Summer 2022</p>
 </div>
 
-# Examples
+## Examples
 
 | App                                    | Description                                                                                |
 |:---------------------------------------|--------------------------------------------------------------------------------------------|
@@ -15,7 +15,7 @@
 | [`Avatar generator`](./packages/og-cs) | React components and props with basic data fetching                                        |
 | [`NIT news`](./packages/utils)         | Full-blown app showcasing production ready React(react-router, react-query, supabase, ...) |
 
-# Recording
+## Recording
 
 | Day   | Links                                |
 |:------|--------------------------------------|
@@ -26,11 +26,11 @@
 
 > **Note** Join [telegram](https://t.me/+mmiBVO34yQ5iMzI0) channel for more information and resources. 
 
-# Slides
+## Slides
 
 See [slides](./slides.pdf)
 
-# Setup
+## Setup
 Make sure you have [node.js](https://nodejs.org/en/) installed. Install yarn if you haven't already. 
 ```npm install --global yarn```
 
@@ -38,8 +38,8 @@ This repo is a [yarn workspace](https://classic.yarnpkg.com/lang/en/docs/workspa
 
 > **Warning** Each example has its own README to setup
 
-# Credit
+## Credit
 All the credit goes to wonderful people at Noshirvani Computer Association(Mohsen Amiri, Reza Bagherian, Yasamin Tavakoli and Ali Bagheri, ...).
 
-# License
+## License
 [MIT](./LICENSE)
